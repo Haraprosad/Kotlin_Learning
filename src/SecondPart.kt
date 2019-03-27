@@ -1,24 +1,7 @@
 import java.util.*
 
 fun main(args: Array<String>){
-    val tempreture = 10
 
-    /*In kotlin variable can be directly assigned with function or expression
-     which can give one output at a time.*/
-
-    val isHot = if(tempreture>50) true else false
-    println(isHot)
-
-    /*In kotlin, expression can be assigned with other value .for
-     include expression : ${expression} */
-
-    val message = "You are ${if(tempreture>50) "fried" else "safe"} fish"
-    println(message)
-
-    /*args[0] denotes kotlin*/
-
-    println("Hello, ${args[0]}")
-    println("********************************************")
     feedTheFish()
 
 }
@@ -28,7 +11,7 @@ fun feedTheFish(){
      which can give one output at a time.*/
 
     val day = randomDay()
-    val food = "pallets"
+    val food = foodOfFish(day)
     println("The fish is feeded $food on $day .")
 
 }
@@ -39,4 +22,18 @@ fun randomDay(): String{
     * following command: list[Random().nextInt(number of elements in which we
      want to pick one.)]*/
     return week[Random().nextInt(7)]
+}
+
+/*Function call with argument .In kotlin , expression can be used
+* directly after return.*/
+
+fun foodOfFish(day : String) : String{
+   return when(day){
+        "Monday"->"pallets"
+        "Tuesday" ->"flakes"
+        "Wednesday" ->"granules"
+        "Thursday" ->"plankton"
+        "Friday" ->"Mosquitos"
+        else ->"fasting"
+    }
 }
