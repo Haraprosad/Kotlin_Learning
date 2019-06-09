@@ -48,4 +48,17 @@ fun main(args: Array<String>){
          println("index is $i and value is ${ar[i]}")
      }
 
+    //while loop
+    var w = 0
+    while(w==0){
+        println("Input your favourite number:")
+        var inp = Integer.parseInt(readLine())
+        if(inp==-1) break
+    }
+    //do while loop.Though condition is wrong ,then one loop must be held.
+    do{
+        println("You entered in do while loop ,input number:")
+    }while(w==1)
+    println("The programm is end.condition in do while w==1 but w==$w")
+
 }
