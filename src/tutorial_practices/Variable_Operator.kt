@@ -26,5 +26,33 @@ fun main(args: Array<String>){
         else -> println("a not equal to 1,2,5")
     }
 
+    //Range operation in kotlin
+
+    //.. operator can be used for storing range element in a variable(like array)
+    var range = 1..10
+    //for every element what will be performed is determined by v_name.forEach{action}
+    range.forEach{print("$it ")} //'it'  expresses  every element  each time
+    var n = 0
+    range.forEach{n=n+it}
+
+    println("\nsummation from 1 to 10 is: $n")
+
+    println("\nReversed:")
+    range.reversed().forEach{print("$it ")}
+
+    println("\n1 to 40 ->step 4:")
+    var rangeTwo = 1..40 step 4
+    rangeTwo.forEach{print("$it ")}
+
+    println("By using downTo method for 10 to 1 :")
+
+    var rangeReverse = 10.downTo(1)
+     rangeReverse.forEach {"$it " }
+
+
+    println("Use of untill method from 10 until 20 :")
+
+    var rangeUntil = 10.until(20)
+    rangeUntil.forEach {print("$it ") }
 
 }
